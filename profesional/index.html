@@ -2,119 +2,388 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Peniel Tours Flamingo</title>
-<meta name="description" content="Peniel Tours Flamingo: tours y experiencias en Playa Flamingo, Guanacaste, Costa Rica. Reserva por WhatsApp.">
-<meta property="og:title" content="Peniel Tours Flamingo">
-<meta property="og:description" content="Tours y experiencias en Playa Flamingo, Guanacaste. Reserva por WhatsApp.">
-<meta name="theme-color" content="#0b3d4a">
-<style>
-:root{--deep:#0b3d4a;--sea:#12808f;--sand:#fbf5ea;--sun:#f4a72a;--coral:#ee6c4d;--ink:#10262d;--wa:#25d366}
-*{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth}
-body{font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--sand)}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:960px;margin:0 auto;padding:0 20px}
-header{background:linear-gradient(170deg,var(--deep) 0%,var(--sea) 70%,#2aa5a0 100%);color:#fff;text-align:center;padding:56px 0 96px;position:relative;overflow:hidden}
-header::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:60px;background:var(--sand);clip-path:ellipse(75% 100% at 50% 100%)}
-.sun{position:absolute;top:28px;right:8%;width:84px;height:84px;border-radius:50%;background:radial-gradient(circle,#ffd36b,var(--sun));opacity:.9;box-shadow:0 0 60px 20px rgba(244,167,42,.35)}
-.logo{width:92px;height:92px;margin:0 auto 18px;border-radius:50%;background:#fff;color:var(--deep);display:grid;place-items:center;font-weight:800;font-size:34px;letter-spacing:-1px;box-shadow:0 8px 30px rgba(0,0,0,.25);position:relative}
-h1{font-size:clamp(2rem,6vw,3.2rem);line-height:1.1;position:relative}
-h1 span{color:var(--sun)}
-.lead{max-width:520px;margin:14px auto 28px;opacity:.95;position:relative}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font-weight:700;transition:transform .15s,box-shadow .15s}
-.btn:hover{transform:translateY(-2px)}
-.btn svg{width:22px;height:22px;fill:currentColor}
-.btn-wa{background:var(--wa);color:#073b1c;box-shadow:0 8px 24px rgba(37,211,102,.4)}
-section{padding:48px 0}
-h2{font-size:1.7rem;color:var(--deep);text-align:center;margin-bottom:8px}
-.sub{text-align:center;color:#4a6168;margin-bottom:32px}
-.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
-.card{background:#fff;border-radius:18px;padding:24px;box-shadow:0 4px 18px rgba(11,61,74,.08)}
-.card .ic{font-size:30px;margin-bottom:8px}
-.card h3{color:var(--deep);margin-bottom:4px;font-size:1.1rem}
-.card p{color:#4a6168;font-size:.95rem}
-.social{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));max-width:720px;margin:0 auto}
-.s{display:flex;align-items:center;gap:14px;padding:18px 20px;border-radius:16px;color:#fff;font-weight:700;box-shadow:0 6px 20px rgba(0,0,0,.12);transition:transform .15s}
-.s:hover{transform:translateY(-3px)}
-.s svg{width:30px;height:30px;fill:#fff;flex:none}
-.s small{display:block;font-weight:400;opacity:.9}
-.fb{background:#1877f2}
-.ig{background:linear-gradient(45deg,#f9a03f,#e1306c 50%,#7b3fe4)}
-.wa{background:#128c4a}
-footer{background:var(--deep);color:#cfe3e6;text-align:center;padding:28px 20px;font-size:.9rem}
-.float{position:fixed;right:18px;bottom:18px;width:60px;height:60px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.3);z-index:9;animation:p 2.4s infinite}
-.float svg{width:32px;height:32px;fill:#fff}
-@keyframes p{0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
-@media(prefers-reduced-motion:reduce){.float{animation:none}html{scroll-behavior:auto}}
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="meta.inicio.title">Peniel Tours Flamingo · Pesca deportiva en Playa Flamingo, Guanacaste</title>
+<meta name="description" content="Salidas de pesca deportiva de medio día, tres cuartos de día y día completo desde Playa Flamingo, Guanacaste, en un Hatteras de 31 pies para hasta 6 personas. Elegí cuánto tiempo querés estar en el agua y cotizá por WhatsApp." data-i18n-attr="content:meta.inicio.desc">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#0C2D3F">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CR">
+<meta property="og:site_name" content="Peniel Tours Flamingo">
+<meta property="og:title" content="Peniel Tours Flamingo · Pesca deportiva en Playa Flamingo">
+<meta property="og:description" content="Medio día, tres cuartos de día o día completo en el agua, desde Playa Flamingo, Guanacaste.">
+<meta property="og:image" content="img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..800;1,100,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/site.css">
 </head>
-<body>
-<header>
-  <div class="sun" aria-hidden="true"></div>
-  <div class="wrap">
-    <div class="logo" aria-hidden="true">PT</div>
-    <h1>Peniel Tours <span>Flamingo</span></h1>
-    <p class="lead">Vive el Pacífico de Guanacaste con guías locales, atención personalizada y experiencias que no se olvidan.</p>
-    <a class="btn btn-wa" data-wa="Hola Peniel Tours, quiero información sobre sus tours." href="#">
-      <svg viewBox="0 0 24 24"><use href="#i-wa"/></svg> Reservar por WhatsApp
+<body data-page="inicio">
+
+<!-- @sprite (bloque compartido: se sincroniza con herramientas/sync_parciales.py) -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="i-escudo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.2s7.2-3.3 7.2-9.2V5.4L12 2.8 4.8 5.4V12c0 5.9 7.2 9.2 7.2 9.2Z"/><path d="m8.9 11.8 2.3 2.3 4.1-4.4"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.59-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.42.25-.69.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35Zm-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 7c0 5.45-4.44 9.88-9.88 9.88Zm8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 0 0-3.48-8.41Z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 21v-7.5h2.6l.4-3.1h-3V8.5c0-.9.3-1.5 1.6-1.5h1.6V4.2c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.3H8v3.1h2.5V21h3Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M6.6 3.5h2.6l1.3 4-1.9 1.3a11 11 0 0 0 6.6 6.6l1.3-1.9 4 1.3v2.6a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2Z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.6"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="m9 4.5-5 2v13l5-2 6 2 5-2v-13l-5 2-6-2Z"/><path d="M9 4.5v13M15 6.5v13"/></symbol>
+  <symbol id="i-nav" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="m4 11 16-7-7 16-2-7-7-2Z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 3.2 2.7 5.5 6 .9-4.35 4.25 1.03 6L12 17.02l-5.38 2.83 1.03-6L3.3 9.6l6-.9L12 3.2Z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-share" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="3.5" y="8.5" width="17" height="4" rx="1"/><path d="M5 12.5v8h14v-8M12 8.5v12M12 8.5S10.5 4 8 4a2.2 2.2 0 0 0 0 4.5h4ZM12 8.5S13.5 4 16 4a2.2 2.2 0 0 1 0 4.5h-4Z"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M12 3.5c.6 4.4 2.1 5.9 6.5 6.5-4.4.6-5.9 2.1-6.5 6.5-.6-4.4-2.1-5.9-6.5-6.5 4.4-.6 5.9-2.1 6.5-6.5Z"/><path d="M18.5 15.5c.25 1.7.8 2.25 2.5 2.5-1.7.25-2.25.8-2.5 2.5-.25-1.7-.8-2.25-2.5-2.5 1.7-.25 2.25-.8 2.5-2.5Z"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5.5M12 7.8h.01"/></symbol>
+  <symbol id="i-calc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M8.5 7h7M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01M8.5 15h.01M12 15h.01M15.5 15v2.8M8.5 18h.01M12 18h.01"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 5.5h16v10H9l-5 4v-14Z"/><path d="M8 9.5h8M8 12.5h5" stroke-linecap="round"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.3 2.4 3.4 5.2 3.4 8.5s-1.1 6.1-3.4 8.5M12 3.5C9.7 5.9 8.6 8.7 8.6 12s1.1 6.1 3.4 8.5"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-pt" viewBox="0 0 52 42" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="26" cy="6" r="3.2" stroke-width="3"/><path stroke-width="3.6" d="M26 9.5V37M18 16h16"/><path stroke-width="3.6" d="M7 26c1.5 8 8 11 19 11s17.5-3 19-11"/><path stroke-width="3.6" d="m1.8 24.5 5.2 2.5 3.6-5.6M50.2 24.5 45 27l-3.6-5.6"/></symbol>
+  <symbol id="i-barco" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 14.5h19L19 19H5.5Z"/><path d="M7 14.5V11h8l2 3.5"/><path d="M9.5 11V7.8h4V11"/><path d="M11.5 7.8V4M11.5 5.4 20 3"/><path d="M2.5 21.5c1.5 0 1.5-.9 3-.9s1.5.9 3 .9 1.5-.9 3-.9 1.5.9 3 .9 1.5-.9 3-.9 1.5.9 3 .9"/></symbol>
+  <symbol id="i-pez" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.8 12c2.9-4.4 7-5.8 11-4.6 2 .6 3.8 2.2 5 4.6-1.2 2.4-3 4-5 4.6-4 1.2-8.1-.2-11-4.6Z"/><path d="m19 12 2.8-3.8v7.6Z"/><path d="M9.5 8.2 11.5 5.5l1.5 2.4"/><circle cx="7.2" cy="11" r=".7" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="11" r="3.8"/><path d="M12 3.2v1.6M12 17.2v1.6M4.2 11h1.6M18.2 11h1.6M6.5 5.5l1.1 1.1M16.4 15.4l1.1 1.1M17.5 5.5l-1.1 1.1M7.6 15.4l-1.1 1.1"/><path d="M3 21c2 0 2-1 4.5-1s2.5 1 4.5 1 2.5-1 4.5-1 2.5 1 4.5 1"/></symbol>
+</svg>
+<!-- /@sprite -->
+
+<!-- @header -->
+<a class="skip" href="#main" data-i18n="a11y.saltar">Saltar al contenido</a>
+
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="brand" href="index.html" aria-label="Peniel Tours Flamingo, inicio">
+      <svg class="brand__mark" aria-hidden="true"><use href="#i-pt"/></svg>
+      <span class="brand__txt"><span class="brand__name">PENIEL TOURS</span></span>
     </a>
+    <nav class="nav" id="menu" aria-label="Principal">
+      <ul>
+        <li><a href="index.html" data-nav="inicio" aria-current="page" data-i18n="nav.inicio">Inicio</a></li>
+        <li><a href="servicios.html" data-nav="servicios" data-i18n="nav.servicios">Salidas</a></li>
+        <li><a href="agendar.html#cotizar" data-nav="agendar" data-i18n="nav.cotizar">Cotizar</a></li>
+        <li><a href="index.html#visitanos" data-nav="visitanos" data-i18n="nav.visitanos">Cómo llegar</a></li>
+      </ul>
+      <div class="nav__extra">
+        <a class="btn btn--primary btn--block" href="agendar.html#cotizar"><svg aria-hidden="true"><use href="#i-calc"/></svg><span data-i18n="cta.cotizar">Cotizar mi salida</span></a>
+        <a class="btn btn--wa btn--block" data-wa="Hola Peniel Tours, estoy viendo su sitio web y quiero consultar por una salida de pesca." data-wa-en="Hi Peniel Tours, I'm on your website and would like to ask about a fishing trip."><svg aria-hidden="true"><use href="#i-wa"/></svg><span data-i18n="cta.whatsapp">Escribir por WhatsApp</span></a>
+      </div>
+    </nav>
+    <div class="hdr__tools">
+      <div class="lang" role="group" aria-label="Idioma / Language">
+        <button type="button" data-lang="es" aria-pressed="true">ES</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="btn btn--primary btn--sm hdr__cta" href="agendar.html#cotizar"><span data-i18n="cta.cotizar.corto">Cotizar</span></a>
+      <button class="burger" type="button" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </header>
 
-<main>
-  <section id="porque">
-    <div class="wrap">
-      <h2>¿Por qué viajar con nosotros?</h2>
-      <p class="sub">Playa Flamingo, Guanacaste · Costa Rica</p>
-      <div class="grid">
-        <div class="card"><div class="ic">🌅</div><h3>Experiencias locales</h3><p>Tours diseñados por gente de la zona, con los mejores lugares y horarios.</p></div>
-        <div class="card"><div class="ic">🤝</div><h3>Trato personalizado</h3><p>Grupos pequeños, familias o parejas: armamos la experiencia a tu medida.</p></div>
-        <div class="card"><div class="ic">🛡️</div><h3>Seguro y confiable</h3><p>Operación responsable, con atención antes, durante y después de tu tour.</p></div>
-        <div class="card"><div class="ic">💬</div><h3>Respuesta inmediata</h3><p>Cotiza y reserva en minutos directamente por WhatsApp.</p></div>
+<div class="promo" data-render="promo" hidden></div>
+<!-- /@header -->
+
+<main id="main">
+
+  <!-- ============================== PORTADA: LA SALIDA ============================== -->
+  <!-- El formulario usa display:contents: sus partes se acomodan en la grilla del hero.
+       Escritorio: texto y selector a la izquierda, carta del día a la derecha.
+       Celular: la carta queda entre las salidas y el botón, para ver el barco avanzar mientras se elige. -->
+  <section class="hero" aria-labelledby="hero-h1">
+    <div class="wrap hero__grid">
+      <div class="hero__titulo">
+        <h1 id="hero-h1"><span data-i18n="inicio.hero.h1a">Pesca deportiva desde</span> <span class="trazo"><span data-i18n="inicio.hero.h1b">Playa Flamingo</span><svg class="trazo__s" viewBox="0 0 132 10" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8 C 38 2, 92 1.5, 130 4.5"/></svg></span></h1>
+        <p class="lead" data-i18n="inicio.hero.lead">Salidas de medio día, tres cuartos de día y día completo en un Hatteras de 31&nbsp;pies, para hasta 6 personas. Elegí cuánto tiempo querés estar en el agua.</p>
+      </div>
+
+      <form class="medida" id="medida" novalidate>
+        <fieldset class="medida__campo">
+          <legend data-i18n="medida.pregunta">¿Cuánto tiempo querés estar en el agua?</legend>
+          <div class="medida__ops">
+            <label class="medida__op"><input type="radio" name="salida" value="medio-dia-manana" checked><span><b>4<small>&nbsp;h</small></b><em data-i18n="salida.am">Medio día<br>mañana</em></span></label>
+            <label class="medida__op"><input type="radio" name="salida" value="medio-dia-tarde"><span><b>4<small>&nbsp;h</small></b><em data-i18n="salida.pm">Medio día<br>tarde</em></span></label>
+            <label class="medida__op"><input type="radio" name="salida" value="tres-cuartos"><span><b>6<small>&nbsp;h</small></b><em data-i18n="salida.tq">Tres cuartos<br>de día</em></span></label>
+            <label class="medida__op"><input type="radio" name="salida" value="dia-completo"><span><b>8<small>&nbsp;h</small></b><em data-i18n="salida.dc">Día<br>completo</em></span></label>
+          </div>
+        </fieldset>
+
+        <figure class="plano">
+          <svg class="plano__svg" id="plano" viewBox="0 36 300 258" role="img" aria-labelledby="plano-t">
+            <title id="plano-t" data-i18n="img.plano">Carta del día: un barco, el sol y una regla de horas con la salida elegida</title>
+            <g id="plano-dibujo"></g>
+          </svg>
+          <figcaption class="plano__cajetin">
+            <span class="plano__pieza" data-i18n="plano.pieza">Salida de pesca deportiva</span>
+            <span class="plano__escala" data-i18n="inicio.hero.escala">Dibujo a escala de horas</span>
+            <span class="plano__spec" data-i18n="inicio.hero.ilus">Hatteras de 31&nbsp;pies, hasta 6 personas, desde Playa Flamingo.</span>
+          </figcaption>
+        </figure>
+
+        <p class="medida__estado" id="medida-estado" aria-live="polite"></p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" id="medida-wa" href="agendar.html#cotizar"><svg aria-hidden="true"><use href="#i-wa"/></svg><span id="medida-cta">Cotizar esta salida por WhatsApp</span></a>
+          <a class="hero__enlace" href="servicios.html" data-i18n="cta.catalogo">Ver las salidas</a>
+        </div>
+      </form>
+
+      <div class="hero__pie">
+        <p class="nota-demo" data-demo><svg aria-hidden="true"><use href="#i-info"/></svg><span data-i18n="demo.medida">La duración de cada salida, la embarcación y la capacidad salen del perfil público de Peniel Tours en FishingBooker (consultado el 11 de octubre de 2026). No hay ningún precio publicado por el negocio, por eso el botón pide la cotización. Confirmar todo con Peniel Tours antes de publicar.</span></p>
+        <ul class="hero__meta">
+          <li><svg aria-hidden="true"><use href="#i-pin"/></svg><span data-i18n="inicio.hero.lugar">Playa Flamingo, Guanacaste, Costa Rica</span></li>
+          <li><svg aria-hidden="true"><use href="#i-barco"/></svg><span data-i18n="inicio.hero.barco">Hatteras de 31&nbsp;pies · hasta 6 personas</span></li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <section id="contacto" style="background:#fff">
+  <!-- ============================== TIPOS DE SALIDA ============================== -->
+  <section class="sec" id="trabajos" aria-labelledby="trabajos-h2" data-flag="galeria">
     <div class="wrap">
-      <h2>Conecta con nosotros</h2>
-      <p class="sub">Escríbenos o síguenos para ver fotos, promociones y novedades.</p>
-      <div class="social">
-        <a class="s wa" data-wa="Hola Peniel Tours, quiero reservar." href="#" rel="noopener" target="_blank">
-          <svg viewBox="0 0 24 24"><use href="#i-wa"/></svg><span>WhatsApp<small>Reserva y cotiza al instante</small></span>
-        </a>
-        <a class="s fb" href="https://www.facebook.com/search/top?q=Peniel%20Tours%20flamingo" rel="noopener" target="_blank">
-          <svg viewBox="0 0 24 24"><use href="#i-fb"/></svg><span>Facebook<small>Peniel Tours Flamingo</small></span>
-        </a>
-        <a class="s ig" href="https://www.instagram.com/penieltoursflamingo/" rel="noopener" target="_blank">
-          <svg viewBox="0 0 24 24"><use href="#i-ig"/></svg><span>Instagram<small>@penieltoursflamingo</small></span>
-        </a>
+      <div class="sec-head">
+        <h2 id="trabajos-h2" data-i18n="inicio.trabajos.h2">Desde la cubierta</h2>
+        <p data-i18n="inicio.trabajos.p">Fotos de las salidas de Peniel Tours, tomadas de sus publicaciones.</p>
+      </div>
+      <div class="trabajos" data-render="trabajos"></div>
+      <p class="trabajos__mas"><a class="hero__enlace" href="servicios.html#galeria" data-i18n="inicio.trabajos.ver">Ver todas las fotos</a></p>
+    </div>
+  </section>
+
+  <section class="sec" id="lineas" aria-labelledby="lineas-h2">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="lineas-h2" data-i18n="inicio.areas.h2">Tipos de salida</h2>
+        <p data-i18n="inicio.areas.p">Elegí una para ver el detalle. Si preferís contar qué querés pescar y con quién vas, el cotizador te dice qué te sirve.</p>
+      </div>
+      <div class="tiles" data-render="categorias"></div>
+    </div>
+  </section>
+
+  <!-- ============================== ASÍ TRABAJAMOS ============================== -->
+  <section class="sec sec--alt" aria-labelledby="pasos-h2">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="pasos-h2" data-i18n="inicio.pasos.h2">De la consulta al agua</h2>
+      </div>
+      <ol class="pasos-home">
+        <li>
+          <span class="pasos-home__n">1</span>
+          <h3 data-i18n="inicio.pasos.1.h">Contanos qué querés</h3>
+          <p data-i18n="inicio.pasos.1.p">En el cotizador elegís cuánto tiempo, qué querés pescar y con quién vas. No hace falta saber de pesca: contá cómo te imaginás el día.</p>
+          <a class="link-arrow" href="agendar.html#cotizar" data-i18n="inicio.pasos.1.a">Ir al cotizador</a>
+        </li>
+        <li>
+          <span class="pasos-home__n">2</span>
+          <h3 data-i18n="inicio.pasos.2.h">Pedís la fecha</h3>
+          <p data-i18n="inicio.pasos.2.p">Elegís el día, la franja y cuántas personas son. La solicitud sale por WhatsApp con todos los datos de la salida.</p>
+          <a class="link-arrow" href="agendar.html#agendar" data-i18n="inicio.pasos.2.a">Reservar una salida</a>
+        </li>
+        <li>
+          <span class="pasos-home__n">3</span>
+          <h3 data-i18n="inicio.pasos.3.h">A pescar</h3>
+          <p data-i18n="inicio.pasos.3.p">Peniel Tours te confirma los detalles de la salida. Si después necesitás cambiar la fecha o tenés una duda, escribís por el canal de quienes ya reservaron.</p>
+          <a class="link-arrow" href="agendar.html#seguimiento" data-i18n="inicio.pasos.3.a">Ya reservé</a>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============================== FICHA TÉCNICA ============================== -->
+  <section class="sec" aria-labelledby="ficha-h2">
+    <div class="wrap ficha">
+      <div class="ficha__txt">
+        <h2 id="ficha-h2" data-i18n="inicio.gar.h2">Ficha técnica</h2>
+        <p data-i18n="inicio.gar.p">Lo que el perfil público de Peniel Tours dice del barco y de lo que lleva cada salida. Tocá un renglón para ver la salida.</p>
+      </div>
+      <div>
+        <dl class="ficha__lista">
+          <div><dt data-i18n="inicio.gar.1.dt">Embarcación</dt><dd data-i18n="inicio.gar.1.dd">Hatteras de 31&nbsp;pies, año 2007</dd></div>
+          <div><dt data-i18n="inicio.gar.2.dt">Capacidad</dt><dd data-i18n="inicio.gar.2.dd">Hasta 6 personas</dd></div>
+          <div><dt data-i18n="inicio.gar.3.dt">Duración de las salidas</dt><dd data-i18n="inicio.gar.3.dd">4, 6 u 8 horas</dd></div>
+          <div><dt data-i18n="inicio.gar.4.dt">Capitán</dt><dd data-i18n="inicio.gar.4.dd">Más de 10 años de experiencia</dd></div>
+        </dl>
+        <h3 class="ficha__sub" data-i18n="inicio.tec.h2">Lo que lleva la salida</h3>
+        <ul class="marcas" data-render="tecnologias"></ul>
+        <p class="nota-demo" data-demo><svg aria-hidden="true"><use href="#i-info"/></svg><span data-i18n="demo.garantias">Cada dato sale del perfil público de Peniel Tours en FishingBooker (11-oct-2026), que es un sitio de terceros. Confirmar con el negocio qué lleva cada salida y cuál es la experiencia del capitán antes de publicar.</span></p>
       </div>
     </div>
   </section>
+
+  <!-- ============================== QUÉ SE PESCA ============================== -->
+  <section class="sec sec--alt" aria-labelledby="local-h2">
+    <div class="wrap">
+      <h2 id="local-h2" data-i18n="inicio.centro.h2">Qué se pesca frente a Flamingo</h2>
+      <div class="local__cols">
+        <div>
+          <p data-i18n="inicio.centro.p1">El perfil de Peniel Tours lista pesca costera, de arrecife y de alta mar. Estas son las especies que menciona:</p>
+          <ul class="especies">
+            <li data-i18n="esp.1">Dorado (mahi mahi)</li>
+            <li data-i18n="esp.2">Marlín negro</li>
+            <li data-i18n="esp.3">Marlín azul</li>
+            <li data-i18n="esp.4">Marlín rayado</li>
+            <li data-i18n="esp.5">Pez gallo</li>
+            <li data-i18n="esp.6">Atún aleta amarilla</li>
+            <li data-i18n="esp.7">Atún aleta negra</li>
+            <li data-i18n="esp.8">Medregal</li>
+          </ul>
+          <p class="nota-demo" data-demo><svg aria-hidden="true"><use href="#i-info"/></svg><span data-i18n="demo.taller">Lista tomada del perfil de FishingBooker (11-oct-2026). Ninguna especie se promete: depende del día. Confirmar con Peniel Tours y no ofrecer resultados de pesca.</span></p>
+        </div>
+        <ul class="lista-check">
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="inicio.centro.l1">Pesca costera, de arrecife y de alta mar, según el perfil del negocio</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="inicio.centro.l2">Se puede quedar con la captura o practicar captura y suelta</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="inicio.centro.l3">Salida apta para niños, según el perfil</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="inicio.centro.l4">Equipo de snorkel a bordo: se avisa al capitán antes</span></li>
+          <li data-flag="director"><svg aria-hidden="true"><use href="#i-check"/></svg><span><span data-i18n="inicio.centro.dir">Capitán:</span> <b data-neg="director"></b></span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== CÓMO LLEGAR ============================== -->
+  <section class="sec" id="visitanos" aria-labelledby="vis-h2">
+    <div class="wrap visita">
+      <div class="visita__info">
+        <h2 id="vis-h2" data-i18n="inicio.vis.h2">Punto de salida</h2>
+        <p class="visita__dir"><svg aria-hidden="true"><use href="#i-pin"/></svg><span><span data-neg="salida">Margaritaville Flamingo Beach Resort</span><br><span data-neg="direccion">Playa Flamingo, Guanacaste</span></span></p>
+        <p class="nota-demo" data-demo><svg aria-hidden="true"><use href="#i-info"/></svg><span data-i18n="demo.horario">Dirección tomada del perfil de FishingBooker (11-oct-2026). Confirmar con Peniel Tours dónde se aborda el barco y cargar las coordenadas exactas y la ficha de Google.</span></p>
+        <div class="visita__btns">
+          <a class="btn btn--ghost btn--sm" data-href="googleMaps"><svg aria-hidden="true"><use href="#i-map"/></svg>Google Maps</a>
+          <a class="btn btn--ghost btn--sm" data-href="waze"><svg aria-hidden="true"><use href="#i-nav"/></svg>Waze</a>
+          <a class="btn btn--wa btn--sm" data-wa="Hola Peniel Tours, tengo una salida reservada y quiero confirmar dónde nos encontramos." data-wa-en="Hi Peniel Tours, I have a trip booked and want to confirm where we meet."><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+          <a class="btn btn--ghost btn--sm" data-href="tel"><svg aria-hidden="true"><use href="#i-phone"/></svg><span data-neg="telefono"></span></a>
+        </div>
+      </div>
+      <div class="visita__mapa">
+        <iframe title="Mapa del punto de salida de Peniel Tours en Playa Flamingo" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Margaritaville+Flamingo+Beach+Resort+Playa+Flamingo&amp;z=15&amp;hl=es&amp;output=embed" data-i18n-attr="title:img.mapa"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== PREGUNTAS ============================== -->
+  <section class="sec sec--alt" aria-labelledby="faq-h2">
+    <div class="wrap faq">
+      <div class="sec-head">
+        <h2 id="faq-h2" data-i18n="inicio.faq.h2">Lo que más se pregunta antes de reservar</h2>
+      </div>
+      <div class="faq__list">
+        <details>
+          <summary data-i18n="inicio.faq.q1">¿Desde dónde sale el barco?</summary>
+          <p data-i18n="inicio.faq.a1">Desde Playa Flamingo, Guanacaste. El perfil del negocio indica el Margaritaville Flamingo Beach Resort como punto de salida; el lugar exacto se confirma al reservar. Mirá <a href="#visitanos">el mapa</a>.</p>
+        </details>
+        <details>
+          <summary data-i18n="inicio.faq.q2">¿Cuántas personas caben?</summary>
+          <p data-i18n="inicio.faq.a2">Hasta 6 personas, en un Hatteras de 31&nbsp;pies. Si son más, escribinos y vemos cómo se organiza.</p>
+        </details>
+        <details>
+          <summary data-i18n="inicio.faq.q3">¿Qué salidas hay y cuánto duran?</summary>
+          <p data-i18n="inicio.faq.a3">Medio día en la mañana o en la tarde (4 horas), tres cuartos de día (6 horas) y día completo (8 horas). Elegí una en la <a href="index.html">portada</a> o mirá el <a href="servicios.html">detalle de cada una</a>.</p>
+        </details>
+        <details>
+          <summary data-i18n="inicio.faq.q4">¿Cuánto cuesta?</summary>
+          <p data-i18n="inicio.faq.a4">Depende de la salida y de la fecha. Por eso el <a href="agendar.html#cotizar">cotizador</a> pregunta primero cuánto tiempo querés estar en el agua y quiénes van: con esos datos sale un mensaje listo y Peniel Tours te pasa el precio exacto.</p>
+        </details>
+        <details>
+          <summary data-i18n="inicio.faq.q5">¿Qué incluye?</summary>
+          <p data-i18n="inicio.faq.a5">Según el perfil del negocio: cañas, carretes y equipo, carnada viva, señuelos, snacks y bebidas, y almuerzo. Los detalles de cada salida se confirman al cotizar.</p>
+        </details>
+        <details>
+          <summary data-i18n="inicio.faq.q6">¿Puedo ir con niños o quedarme con lo que pesque?</summary>
+          <p data-i18n="inicio.faq.a6">El perfil indica que la salida es apta para niños y que se puede quedar con la captura o practicar captura y suelta. Avisá las edades y lo que preferís al reservar.</p>
+        </details>
+      </div>
+      <p class="nota-demo" data-demo><svg aria-hidden="true"><use href="#i-info"/></svg><span data-i18n="demo.faq">Respuestas armadas con el perfil público de FishingBooker (11-oct-2026). No salen de una conversación con el negocio: confirmarlas y, si hay preguntas frecuentes reales en Instagram o Facebook, reemplazarlas.</span></p>
+    </div>
+  </section>
+
+  <!-- ============================== CIERRE ============================== -->
+  <section class="cierre" aria-labelledby="cierre-h2">
+    <div class="wrap cierre__in">
+      <div>
+        <h2 id="cierre-h2" data-i18n="inicio.cierre.h2">Contanos la fecha por WhatsApp</h2>
+        <p data-i18n="inicio.cierre.p">La fecha que querés y cuántas personas son alcanzan para cotizar. Si todavía no sabés cuál salida te conviene, te orientamos.</p>
+      </div>
+      <a class="cierre__num" data-wa="Hola Peniel Tours, quiero cotizar una salida de pesca. Somos ___ personas y queremos ir el ___." data-wa-en="Hi Peniel Tours, I'd like a quote for a fishing trip. There are ___ of us and we would like to go on ___." aria-label="Escribir por WhatsApp" data-i18n-attr="aria-label:a11y.waNum"><svg aria-hidden="true"><use href="#i-wa"/></svg><span data-neg="whatsappTexto"></span><span class="cierre__sin" data-i18n="cierre.sin">Escribinos</span></a>
+      <div class="cierre__alt">
+        <a class="btn btn--ghost" href="agendar.html#cotizar"><svg aria-hidden="true"><use href="#i-calc"/></svg><span data-i18n="cta.cotizar">Cotizar mi salida</span></a>
+        <a class="btn btn--ghost" data-href="instagram"><svg aria-hidden="true"><use href="#i-ig"/></svg><span>Instagram</span></a>
+        <a class="btn btn--ghost" data-href="facebook"><svg aria-hidden="true"><use href="#i-fb"/></svg><span>Facebook</span></a>
+        <a class="btn btn--ghost" data-href="tel"><svg aria-hidden="true"><use href="#i-phone"/></svg><span data-neg="telefono"></span></a>
+      </div>
+    </div>
+  </section>
+
 </main>
 
-<footer>© <span id="y"></span> Peniel Tours Flamingo · Guanacaste, Costa Rica</footer>
+<!-- @footer -->
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__grid">
+      <div>
+        <a class="brand" href="index.html" aria-label="Peniel Tours Flamingo, inicio">
+          <svg class="brand__mark" aria-hidden="true"><use href="#i-pt"/></svg>
+          <span class="brand__txt"><span class="brand__name">PENIEL TOURS</span></span>
+        </a>
+        <p class="ftr__lema" data-neg="eslogan">Pesca deportiva desde Playa Flamingo</p>
+        <svg class="ftr__trazo" viewBox="0 0 132 10" aria-hidden="true"><path d="M2 8 C 38 2, 92 1.5, 130 4.5" pathLength="1" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>
+        <div class="ftr__redes">
+          <a data-href="instagram" aria-label="Instagram de Peniel Tours Flamingo"><svg aria-hidden="true"><use href="#i-ig"/></svg></a>
+          <a data-href="facebook" aria-label="Facebook de Peniel Tours Flamingo"><svg aria-hidden="true"><use href="#i-fb"/></svg></a>
+          <a data-wa="Hola Peniel Tours, los encontré en su sitio web y quiero consultar por una salida de pesca." data-wa-en="Hi Peniel Tours, I found you on your website and want to ask about a fishing trip." aria-label="WhatsApp de Peniel Tours Flamingo"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h3 data-i18n="ftr.explorar">Explorá</h3>
+        <ul>
+          <li><a href="servicios.html" data-i18n="nav.servicios">Salidas</a></li>
+          <li><a href="agendar.html#cotizar" data-i18n="nav.cotizar">Cotizar</a></li>
+          <li><a href="index.html#visitanos" data-i18n="nav.visitanos">Cómo llegar</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 data-i18n="ftr.contacto">Contacto</h3>
+        <ul>
+          <li><a data-wa="Hola Peniel Tours, quiero cotizar una salida de pesca." data-wa-en="Hi Peniel Tours, I'd like a quote for a fishing trip.">WhatsApp <span data-neg="whatsappTexto"></span></a></li>
+          <li><a data-href="instagram"><span data-neg="instagramUsuario"></span></a></li>
+          <li data-requiere="telefono"><a data-href="tel"><span data-neg="telefono"></span></a></li>
+          <li data-requiere="email"><a data-href="email"><span data-neg="email"></span></a></li>
+          <li><span data-neg="direccion"></span></li>
+        </ul>
+      </div>
+      <div>
+        <h3 data-i18n="ftr.clientes">Si ya reservaste</h3>
+        <ul>
+          <li><a href="agendar.html#agendar" data-i18n="cta.visita">Reservar una salida</a></li>
+          <li><a href="agendar.html#seguimiento" data-i18n="ftr.seguimiento">Cambiar la fecha o consultar</a></li>
+          <li><a data-href="escribir-resena" data-i18n="ftr.resena">Dejar una reseña en Google</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr__legal">
+      <p>© <span data-year></span> Peniel Tours Flamingo. <span data-i18n="ftr.legal">Playa Flamingo, Guanacaste, Costa Rica.</span></p>
+      <p data-demo data-i18n="ftr.demo">Propuesta de Axel Sites</p>
+    </div>
+  </div>
+</footer>
 
-<a class="float" id="fab" data-wa="Hola Peniel Tours, quiero información." href="#" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
-  <svg viewBox="0 0 24 24"><use href="#i-wa"/></svg>
-</a>
+<a class="wa-float" data-wa="Hola Peniel Tours, estoy viendo su sitio web y quiero consultar por una salida de pesca." data-wa-en="Hi Peniel Tours, I'm on your website and would like to ask about a fishing trip." aria-label="Escribir a Peniel Tours por WhatsApp" data-i18n-attr="aria-label:a11y.wa"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+<nav class="barra-movil" aria-label="Acciones rápidas" data-i18n-attr="aria-label:a11y.rapidas">
+  <a href="servicios.html"><svg aria-hidden="true"><use href="#i-barco"/></svg><span data-i18n="movil.productos">Salidas</span></a>
+  <a class="is-wa" data-wa="Hola Peniel Tours, estoy viendo su sitio web y quiero consultar por una salida de pesca." data-wa-en="Hi Peniel Tours, I'm on your website and would like to ask about a fishing trip."><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+  <a href="agendar.html#cotizar"><svg aria-hidden="true"><use href="#i-calc"/></svg><span data-i18n="movil.cotizar">Cotizar</span></a>
+</nav>
+<!-- /@footer -->
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.1-.2-1.2-1.6-1.2-3s.8-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.5Z"/></symbol>
-  <symbol id="i-fb" viewBox="0 0 24 24"><path d="M13.5 22v-8h2.7l.5-3.2h-3.2V8.7c0-.9.4-1.7 1.8-1.7h1.5V4.2S15.5 4 14.3 4C11.8 4 10.2 5.5 10.2 8.2v2.6H7.5V14h2.7v8h3.3Z"/></symbol>
-  <symbol id="i-ig" viewBox="0 0 24 24"><path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.3-3.3a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Z"/></symbol>
-</svg>
-
-<script>
-// ⚠️ Reemplazar por el número real de WhatsApp (código de país + número, sin + ni espacios). Ej: Costa Rica = 506XXXXXXXX
-var WA_NUMBER = "506XXXXXXXX";
-document.querySelectorAll("[data-wa]").forEach(function(a){
-  a.href = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(a.dataset.wa);
-  a.target = "_blank"; a.rel = "noopener";
-});
-document.getElementById("y").textContent = new Date().getFullYear();
-</script>
+<script src="js/core.js"></script>
+<script src="js/en.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+<script src="js/salida.js"></script>
+<script src="js/dinamico.js"></script>
 </body>
 </html>

@@ -1,0 +1,15 @@
+# Material de trabajo local (no es parte del sitio)
+_investigacion/
+
+# Configuración local de Claude Code (launch.json sí se sube)
+.claude/settings.local.json
+
+# Basura de sistema
+Thumbs.db
+ehthumbs.db
+desktop.ini
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
