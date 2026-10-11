@@ -32,7 +32,7 @@ Todo dato real vive en `NEGOCIO`, dentro de `assets/core.js`. **Campo vacío = e
 Después de editar: `cp assets/core.js profesional/js/core.js` (y lo mismo con `core.css`). Las banderas están en las
 primeras líneas de `profesional/js/main.js`. Más detalle en [`CLAUDE.md`](CLAUDE.md).
 
-**Lo primero que hay que cargar:** el número de WhatsApp (`NEGOCIO.whatsapp`, con código de país y sin `+`).
+**Lo primero que hay que confirmar:** a qué se dedica Peniel Tours. El catálogo sale de un perfil de FishingBooker que el cliente no reconoce todavía (ver `PENDIENTES-CLIENTE.md`). WhatsApp (+506 8471 6533), Facebook e Instagram ya están cargados.
 
 ## Publicar
 

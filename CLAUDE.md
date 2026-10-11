@@ -83,3 +83,12 @@ grep -rniE "montero|ducha|calentador" --include=*.html --include=*.js --include=
 ```
 
 `scripts/probar.js` usa Playwright; ver el encabezado del archivo para las variables `PLAYWRIGHT_PATH` y `CHROMIUM`.
+
+---
+
+## Datos que NO se deben tocar sin fuente nueva
+
+- WhatsApp `50684716533` (+506 8471 6533), Facebook `https://www.facebook.com/penieltours/` e Instagram
+  `@penieltoursflamingo`: los dio quien administra el proyecto el 11-oct-2026.
+- Todo lo que sale del perfil de FishingBooker (barco, capacidad, salidas, qué incluye, especies, punto de salida) es
+  **provisional**: el cliente dijo que no lo conoce. No se promueve a dato confirmado hasta que el negocio lo diga.

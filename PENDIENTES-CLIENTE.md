@@ -3,18 +3,40 @@
 Lo que falta para publicar, con lo más importante primero. **Nada de esto se inventó**: donde no hay dato, el
 sitio queda vacío o lo dice (ver `CLAUDE.md`).
 
-Fuente de todo lo que sí aparece: perfil público de Peniel Tours en
-[FishingBooker](https://fishingbooker.com/charters/view/15835), consultado el **11-oct-2026**. Es un sitio de
-terceros, así que **todo** se confirma con el negocio.
+## Ya cargado (dado por quien administra el proyecto, 11-oct-2026)
 
-## 1. Bloquean la publicación
+- WhatsApp: **+506 8471 6533** (`NEGOCIO.whatsapp`). Todos los botones de WhatsApp ya abren el chat con ese número.
+- Facebook: <https://www.facebook.com/penieltours/> (se quitó `?locale=es_LA` del enlace original).
+- Instagram: `@penieltoursflamingo`.
 
-| # | Qué falta | Por qué importa | Dónde se carga |
-|---|---|---|---|
-| 1 | **Número de WhatsApp** (código de país + número, sin `+` ni espacios) | Hoy todos los botones de WhatsApp abren WhatsApp **sin destinatario** | `NEGOCIO.whatsapp` y `whatsappTexto` en `assets/core.js` |
-| 2 | **Teléfono**, si atienden llamadas | Se oculta mientras esté vacío | `telefono` y `telefonoHref` |
-| 3 | **Enlace directo de la página de Facebook** («Peniel Tours flamingo») | Hoy el botón abre una *búsqueda* de Facebook | `NEGOCIO.facebook` |
-| 4 | **Confirmar que el perfil de FishingBooker es de este negocio** y que sus datos siguen vigentes | Todo el catálogo sale de ahí | ver sección 2 |
+## 1. Bloquea la publicación: confirmar a qué se dedica Peniel Tours
+
+Todo el catálogo (salidas, barco, capacidad, qué incluye, especies, punto de salida) sale de un perfil de
+[FishingBooker](https://fishingbooker.com/charters/view/15835) llamado «Peniel Tours», en Playa Flamingo
+(consultado el **11-oct-2026**). Es un sitio de terceros y **quien administra el proyecto dijo que no lo conoce**:
+no se sabe si es del mismo negocio. Facebook pide iniciar sesión, así que tampoco se pudo leer desde ahí.
+Por eso cada dato lleva la nota «sin confirmar con el negocio».
+
+Mensaje listo para mandarle al dueño:
+
+> Hola, estoy armando el sitio web de Peniel Tours. ¿Me confirmás estas cosas?
+> 1. ¿Ofrecen pesca deportiva? ¿En qué barco y para cuántas personas?
+> 2. ¿Qué salidas tienen y cuánto duran (medio día, tres cuartos, día completo)? ¿A qué hora salen?
+> 3. ¿Ofrecen otros tours además de la pesca (snorkel, paseos, etc.)?
+> 4. ¿Dónde se aborda el barco?
+> 5. ¿Qué incluye cada salida (equipo, comida, bebidas)?
+> 6. ¿Tienen fotos propias de las salidas que podamos usar?
+> 7. ¿El 8471-6533 también recibe llamadas, o solo WhatsApp?
+
+Si no es pesca, o hay más tours, se cambia el catálogo en `NEGOCIO.servicios` y `NEGOCIO.categorias`
+(`assets/core.js`); el resto del sitio se acomoda solo.
+
+## Otros pendientes
+
+| Qué falta | Por qué importa | Dónde se carga |
+|---|---|---|
+| **Teléfono** para llamadas, si lo hay | Se oculta mientras esté vacío | `telefono` y `telefonoHref` |
+| Fotos propias de las salidas | La galería está apagada | ver sección 3 |
 
 ## 2. Datos del perfil de FishingBooker por confirmar
 

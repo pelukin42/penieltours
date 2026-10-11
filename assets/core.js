@@ -13,8 +13,9 @@
    Campo vacío = ese elemento o sección NO se dibuja. Nunca se rellena.
    Fuentes:
      · «Perfil FishingBooker» = fishingbooker.com/charters/view/15835, consultado el 11-oct-2026.
-       Es un perfil de terceros: se confirma con Peniel Tours antes de publicar.
-     · «Cliente» = lo que dio quien administra el proyecto (nombres de Facebook e Instagram).
+       Es un perfil de terceros llamado «Peniel Tours», en Playa Flamingo. NO se confirmó que sea de este
+       negocio: quien administra el proyecto dijo que no lo conoce. Todo lo que sale de ahí es provisional.
+     · «Cliente» = lo que dio quien administra el proyecto (WhatsApp, Facebook e Instagram).
    -------------------------------------------------------------------------- */
 const NEGOCIO = {
   nombre: 'Peniel Tours',
@@ -43,16 +44,16 @@ const NEGOCIO = {
            reprogramar: 'necesito cambiar la fecha', reprogramarEn: 'I need to change the date',
            grupo: 'tipo de salida', grupos: 'tipos de salida', grupoEn: 'trip type', gruposEn: 'trip types' },
 
-  // CLIENTE — nombres de las redes
+  // CLIENTE — datos entregados por quien administra el proyecto (11-oct-2026)
   instagram: 'https://www.instagram.com/penieltoursflamingo/',
   instagramUsuario: '@penieltoursflamingo',
-  facebook: 'https://www.facebook.com/search/top?q=Peniel%20Tours%20flamingo',   // [PENDIENTE] URL directa de la página «Peniel Tours flamingo»
+  facebook: 'https://www.facebook.com/penieltours/',     // enlace dado como facebook.com/penieltours/?locale=es_LA; se quitó el idioma
   facebookNombre: 'Peniel Tours flamingo',
+  whatsapp: '50684716533',         // +506 8471 6533. Código de país + número, sin + ni espacios
+  whatsappTexto: '8471-6533',      // cómo se muestra el número (debe coincidir con whatsapp)
 
   // [PENDIENTE] — no hay fuente: vacío hasta que el negocio lo entregue
-  whatsapp: '',                    // [PENDIENTE] código de país + número, sin + ni espacios. Ej.: 506XXXXXXXX
-  whatsappTexto: '',               // cómo se muestra el número (debe coincidir con whatsapp)
-  telefono: '', telefonoHref: '',
+  telefono: '', telefonoHref: '',  // llamadas: no se dijo si el 8471-6533 también recibe llamadas
   email: '',
   tiktok: '',
   dominio: '',
@@ -77,7 +78,7 @@ const NEGOCIO = {
 
   // EMBARCACIÓN — Perfil FishingBooker
   barco: { tipo: 'Hatteras', pies: 31, anio: 2007, capacidad: 6,
-           fuente: 'Perfil FishingBooker, 11-oct-2026' },
+           fuente: 'Perfil FishingBooker, 11-oct-2026 (sin confirmar con el negocio)' },
 
   // Promoción del mes: un solo lugar para cambiarla. activa:false = no se muestra.
   promo: { activa: false, texto: '', textoEn: '', wa: '' },
@@ -118,25 +119,25 @@ const NEGOCIO = {
       nombre: 'Medio día, en la mañana', nombreEn: 'Half day, morning',
       desc: 'Cuatro horas de pesca en la mañana, desde Playa Flamingo. Incluye equipo de pesca, carnada, snacks y bebidas, según el perfil del negocio.',
       descEn: 'Four hours of fishing in the morning, out of Playa Flamingo. Includes fishing gear, bait, snacks and drinks, per the business profile.',
-      fuente: 'Perfil FishingBooker, 11-oct-2026' },
+      fuente: 'Perfil FishingBooker, 11-oct-2026 (sin confirmar con el negocio)' },
     { id: 'medio-dia-tarde', rotulo: 'Tarde', rotuloEn: 'Afternoon', cats: ['medio-dia'], zonas: ['hasta-6'], horas: 4, franja: 'tarde',
       precio: null, foto: 'img/dibujos/medio-dia-tarde.svg',
       nombre: 'Medio día, en la tarde', nombreEn: 'Half day, afternoon',
       desc: 'Cuatro horas de pesca en la tarde, desde Playa Flamingo. Incluye equipo de pesca, carnada, snacks y bebidas, según el perfil del negocio.',
       descEn: 'Four hours of fishing in the afternoon, out of Playa Flamingo. Includes fishing gear, bait, snacks and drinks, per the business profile.',
-      fuente: 'Perfil FishingBooker, 11-oct-2026' },
+      fuente: 'Perfil FishingBooker, 11-oct-2026 (sin confirmar con el negocio)' },
     { id: 'tres-cuartos', rotulo: 'Tres cuartos de día', rotuloEn: 'Three quarters of a day', cats: ['tres-cuartos'], zonas: ['hasta-6'], horas: 6,
       precio: null, foto: 'img/dibujos/tres-cuartos.svg',
       nombre: 'Tres cuartos de día', nombreEn: '3/4 day',
       desc: 'Seis horas de pesca desde Playa Flamingo. Incluye equipo de pesca, carnada, snacks y bebidas, según el perfil del negocio.',
       descEn: 'Six hours of fishing out of Playa Flamingo. Includes fishing gear, bait, snacks and drinks, per the business profile.',
-      fuente: 'Perfil FishingBooker, 11-oct-2026' },
+      fuente: 'Perfil FishingBooker, 11-oct-2026 (sin confirmar con el negocio)' },
     { id: 'dia-completo', rotulo: 'Día completo', rotuloEn: 'Full day', cats: ['dia-completo'], zonas: ['hasta-6'], horas: 8,
       precio: null, foto: 'img/dibujos/dia-completo.svg',
       nombre: 'Día completo', nombreEn: 'Full day',
       desc: 'Ocho horas de pesca desde Playa Flamingo. Incluye equipo de pesca, carnada, snacks, bebidas y almuerzo, según el perfil del negocio.',
       descEn: 'Eight hours of fishing out of Playa Flamingo. Includes fishing gear, bait, snacks, drinks and lunch, per the business profile.',
-      fuente: 'Perfil FishingBooker, 11-oct-2026' }
+      fuente: 'Perfil FishingBooker, 11-oct-2026 (sin confirmar con el negocio)' }
   ],
 
   /* ---------- Lo que lleva la salida (solo con fuente) ---------- */
@@ -144,23 +145,23 @@ const NEGOCIO = {
     { id: 'hatteras', nombre: 'Hatteras de 31 pies',
       origen: 'Construida en 2007', origenEn: 'Built in 2007',
       uso: 'Hasta 6 personas a bordo', usoEn: 'Up to 6 guests on board',
-      servicio: 'dia-completo', fuente: 'Perfil FishingBooker, 11-oct-2026' },
+      servicio: 'dia-completo', fuente: 'Perfil FishingBooker, 11-oct-2026 (sin confirmar con el negocio)' },
     { id: 'equipo', nombre: 'Cañas, carretes y señuelos',
       origen: 'Incluido en el precio', origenEn: 'Included in the price',
       uso: 'Equipo ligero y pesado, carnada viva', usoEn: 'Light and heavy tackle, live bait',
-      servicio: 'medio-dia-manana', fuente: 'Perfil FishingBooker, 11-oct-2026' },
+      servicio: 'medio-dia-manana', fuente: 'Perfil FishingBooker, 11-oct-2026 (sin confirmar con el negocio)' },
     { id: 'a-bordo', nombre: 'GPS, silla de combate y baño',
       origen: 'A bordo', origenEn: 'On board',
       uso: 'Vivero de carnada viva y nevera con hielo', usoEn: 'Live-bait tank and ice cooler',
-      servicio: 'tres-cuartos', fuente: 'Perfil FishingBooker, 11-oct-2026' },
+      servicio: 'tres-cuartos', fuente: 'Perfil FishingBooker, 11-oct-2026 (sin confirmar con el negocio)' },
     { id: 'comida', nombre: 'Snacks, bebidas y almuerzo',
       origen: 'Incluido en el precio', origenEn: 'Included in the price',
       uso: 'Agua y refresco; el almuerzo según la salida', usoEn: 'Water and soft drinks; lunch depends on the trip',
-      servicio: 'dia-completo', fuente: 'Perfil FishingBooker, 11-oct-2026' },
+      servicio: 'dia-completo', fuente: 'Perfil FishingBooker, 11-oct-2026 (sin confirmar con el negocio)' },
     { id: 'snorkel', nombre: 'Equipo de snorkel',
       origen: 'A bordo, se avisa al capitán antes', origenEn: 'On board, tell the captain beforehand',
       uso: 'Para meterse al agua en la salida', usoEn: 'To get in the water during the trip',
-      servicio: 'tres-cuartos', fuente: 'Perfil FishingBooker, 11-oct-2026' }
+      servicio: 'tres-cuartos', fuente: 'Perfil FishingBooker, 11-oct-2026 (sin confirmar con el negocio)' }
   ],
 
   /* ---------- Sin paquetes, plan de mantenimiento, regalo ni galería ---------- */
