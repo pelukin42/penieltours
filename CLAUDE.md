@@ -1,94 +1,58 @@
 # Peniel Tours Flamingo — convenciones del proyecto
 
-Sitio multipágina de Peniel Tours (pesca deportiva desde Playa Flamingo, Guanacaste). Está construido sobre la
-**misma estructura base que el sitio de Industrias Montero** (`pelukin42/industrias-montero`, Plan Pro de Axel
-Sites): un motor en HTML, CSS y JavaScript planos, sin dependencias, que dibuja todo desde un objeto `NEGOCIO`.
+Sitio web de Peniel Tours (tours de aventura en Playa Flamingo, Guanacaste). HTML, CSS y JavaScript planos.
+Las páginas de `profesional/` se generan con `python3 herramientas/build.py` desde `herramientas/datos.py`.
+Diseño de referencia: sitios de tours de naturaleza como Tamarindo Estuary Tours. **No** copia el diseño de otros
+clientes del autor (el sitio de Industrias Montero se usó solo como referencia de «sitio web real», no de estilo).
 
 ---
 
 ## Reglas duras
 
-1. **Nunca inventar un dato del negocio.** Ni precios, ni horarios, ni garantías, ni capturas prometidas, ni años
-   de experiencia, ni testimonios. Campo sin fuente = vacío en `NEGOCIO` = no se dibuja. Lo dudoso va con nota de
-   demo y se anota en `PENDIENTES-CLIENTE.md`.
-2. **Cada dato lleva su fuente** (campo `fuente:` o comentario en `assets/core.js`). En modo demo se ve en la tarjeta.
-3. **Solo fotos del cliente.** Hoy no hay ninguna cargada. Nunca bancos de imágenes ni fotos de FishingBooker.
-   Si hace falta una pieza visual, se dibuja (`herramientas/dibujos.py`).
-4. **Las propuestas se ven como propuestas.** Lo que salió de un sitio de terceros lleva `nota-demo`.
-5. **Los formularios no mienten.** Sin `NEGOCIO.endpoint`, nada finge haberse guardado: se abre WhatsApp con el
-   mensaje completo.
-6. **No se registra ni se compra ningún dominio** sin autorización explícita.
-7. **El sitio no promete resultados de pesca.** Las especies se listan como «lo que menciona el perfil».
+1. **Nunca inventar un dato del negocio.** Ni precios, ni horarios, ni duraciones, ni garantías, ni seguros, ni
+   capturas o avistamientos prometidos, ni años de experiencia, ni testimonios, ni calificaciones. Campo sin fuente =
+   no se escribe. Lo dudoso se marca con `conf(...)` (se ve con `?revisar`) y se anota en `PENDIENTES-CLIENTE.md`.
+2. **Cada dato lleva su fuente** (campo `fuente` en `datos.py`): IG (Instagram propio), FB (Facebook propio),
+   CLI (lo dio quien administra el proyecto) o TERC (sitio de terceros, provisional).
+3. **Solo fotos y videos del propio negocio** (su Instagram). Nunca bancos de imágenes ni fotos de otros sitios.
+   Donde no hay foto, la tarjeta lleva un pictograma dibujado, nunca una foto ajena.
+4. **Los formularios no mienten:** no guardan nada; arman el mensaje y abren WhatsApp.
+5. **No se registra ni se compra ningún dominio** sin autorización explícita.
+6. El sitio **no promete resultados** (pesca, avistamientos). Se habla de lo que se vio en sus fotos.
+7. Todo texto visible lleva inglés y español (`T(en, es)` en `build.py`). El inglés es el idioma base.
 
 ---
 
-## Fuente única
+## Datos del negocio (no tocar sin fuente nueva)
 
-`assets/core.css` y `assets/core.js` son los originales. Después de editarlos:
-
-```bash
-cp assets/core.css profesional/css/styles.css && cp assets/core.js profesional/js/core.js
-```
-
-`profesional/css/site.css` no tiene copia: se edita directo.
-
-El sprite de íconos, el encabezado y el pie viven en `profesional/index.html` entre las marcas `@sprite`,
-`@header` y `@footer`. Después de tocarlos: `python3 herramientas/sync_parciales.py`.
-
-Los dibujos de las salidas y el ícono se generan con `python3 herramientas/dibujos.py`.
+- WhatsApp y llamadas: **+506 8471 6533** (`50684716533`). Lo dio quien administra el proyecto y sale en su pendón.
+- Instagram `@penieltoursflamingo`; Facebook `https://www.facebook.com/penieltours/` («Peniel Tours flamingo»).
+- Servicios: su biografía de Instagram («ATV, ZipLine, Horseback Riding, Tubing, Wave Runners, Sunset Cruise, and More!
+  Call or text for details and pricing!»), su volante de Facebook (ATV, Water Rafting, Sport Fishing, Horseback Riding,
+  Sailing, Kayak, Hiking, Sightseeing, Shuttles, Canopy, Volcano Tours, Palo Verde National Park, Turtle Tours) y su pendón
+  (Sport Fishing, Tubing, ATV, Boat Tours, Rápel, tour de aventura de un día).
+- Precios: **no hay**. Su biografía dice «llama o escribe para detalles y precios». No se publican precios.
+- Provisional (TERC): duraciones de pesca (FishingBooker) y el listado de Tripadvisor.
 
 ---
 
-## Vocabulario del rubro
+## Cómo está armado
 
-Está en `NEGOCIO.vocab`: *salida*, *viajero*, *reservar*, *grupo*. No se dice «producto», «cita», «sesión» ni
-«visita». El canal «ya reservé» (`quien`, `de`, `confirmar`, `reprogramar`) tiene sus frases en el mismo lugar.
-
-## Banderas
-
-Solo en las primeras líneas de `profesional/js/main.js`. **En ningún otro archivo.**
-
-| Bandera | Hoy | Por qué |
-|---|---|---|
-| `MODO_DEMO` | `true` | Es una propuesta |
-| `MOSTRAR_PRECIOS` | `false` | Solo hay tarifas en un perfil de terceros |
-| `MOSTRAR_HORARIO` | `false` | Las salidas son por reserva |
-| `MOSTRAR_DIRECTOR` | `false` | No se conoce el nombre del capitán |
-| `CLUB`, `TARJETA_REGALO` | `false` | No aplican |
-| `GALERIA` | `false` | No hay fotos propias cargadas |
-
----
-
-## Sistema visual
-
-**Idea:** el sitio se lee como una carta náutica. La portada es la **salida a escala de horas**
-(`profesional/js/salida.js`): se elige medio día mañana, medio día tarde, tres cuartos o día completo; el barco
-avanza hasta el final de la barra de horas, el sol marca mañana, tarde o día entero y la barra naranja mide la
-salida. La regla va de 0 a 8 horas **sin horas de reloj**, porque no se conocen los horarios de salida.
-
-- Colores solo en `:root` de `assets/core.css`: `--marino` (texto, trazos, pie), `--marca` (naranja de boya: acción
-  y salida elegida), `--espuma` y `--oleaje` (agua; `--oleaje` solo para trazos), `--arena` (reglas).
-- Letra: una sola familia, Archivo, a lo largo de su eje de ancho.
-- Cantos de 3 px y sin sombras. Todo lo que se mueve es parte del dibujo y `prefers-reduced-motion` lo apaga.
-- Bilingüe: `profesional/js/en.js` tiene una entrada por cada `data-i18n`. Las notas `demo.*` no se traducen.
-  `python3 scripts/claves_i18n.py profesional` debe decir «SIN TRADUCCIÓN: ninguna».
+- `herramientas/datos.py`: tours, categorías, galería, videos, preguntas y datos de contacto.
+- `herramientas/build.py`: genera `index`, `tours`, `gallery`, `contact`, `links` y `404`, con encabezado, pie, íconos y
+  pictogramas SVG. Después de cambiar datos o plantillas: `python3 herramientas/build.py`.
+- `profesional/css/site.css`: todos los estilos. Colores solo en `:root` (azul marino y celeste del logo, naranja de
+  atardecer para la acción). Letras: Barlow Condensed (títulos) y Barlow (texto).
+- `profesional/js/site.js`: idioma EN/ES (`data-es` y `data-es-<atributo>`), menú, formularios a WhatsApp, videos que
+  se reproducen al verse, filtro y visor de la galería y el modo `?revisar`.
+- `herramientas/instagram.py` y `herramientas/fotos.py`: cómo se obtuvieron y optimizaron las fotos y videos.
 
 ## Cómo verificar antes de mostrar
 
 ```bash
-python3 -m http.server 5538 --bind 127.0.0.1 &        # servidor local
-node scripts/probar.js                                # errores, desborde a 390 px, WhatsApp de cada flujo
-python3 scripts/claves_i18n.py profesional            # traducciones completas
-grep -rniE "montero|ducha|calentador" --include=*.html --include=*.js --include=*.css .   # restos: cero
+python3 -m http.server 5538 --bind 127.0.0.1 &       # desde la raíz del repositorio
+PLAYWRIGHT_PATH=/ruta/a/playwright node scripts/probar.js
 ```
 
-`scripts/probar.js` usa Playwright; ver el encabezado del archivo para las variables `PLAYWRIGHT_PATH` y `CHROMIUM`.
-
----
-
-## Datos que NO se deben tocar sin fuente nueva
-
-- WhatsApp `50684716533` (+506 8471 6533), Facebook `https://www.facebook.com/penieltours/` e Instagram
-  `@penieltoursflamingo`: los dio quien administra el proyecto el 11-oct-2026.
-- Todo lo que sale del perfil de FishingBooker (barco, capacidad, salidas, qué incluye, especies, punto de salida) es
-  **provisional**: el cliente dijo que no lo conoce. No se promueve a dato confirmado hasta que el negocio lo diga.
+Debe dar todo en `OK`: sin errores de JavaScript ni imágenes rotas, sin desborde a 390 px, enlaces internos válidos,
+idioma ES/EN, formularios, galería y menú del celular.

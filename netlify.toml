@@ -1,12 +1,5 @@
 # Configuración de Netlify para el sitio de Peniel Tours Flamingo.
-#
-# El sitio es HTML, CSS y JS planos: no hay compilación, así que no se define
-# ningún "command". Al conectar el repositorio, Netlify lee este archivo solo.
-#
-# Se publica SOLO la carpeta profesional/. En la raíz del repositorio quedan los
-# documentos de trabajo (PENDIENTES-CLIENTE, README, CLAUDE), las herramientas y
-# los scripts: nada de eso debe quedar en internet.
-
+# El sitio es HTML, CSS y JS planos: no hay compilación. Se publica solo la carpeta profesional/.
 [build]
   publish = "profesional"
 
@@ -16,13 +9,19 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     X-Frame-Options = "SAMEORIGIN"
-    # Mientras sea propuesta, ningún buscador la indexa (las páginas ya traen
-    # noindex; esto cubre también imágenes). QUITAR al publicar.
-    X-Robots-Tag = "noindex, nofollow"
 
-# Estilos y scripts no llevan hash en el nombre (styles.css, main.js): con
-# must-revalidate el navegador pregunta siempre y Netlify responde 304 si no
-# cambió. Así nunca se queda con la versión vieja después de un cambio.
+# Fotos y videos no cambian de nombre: se cachean un mes.
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/video/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+# Estilos y scripts: preguntar siempre (Netlify responde 304 si no cambiaron).
 [[headers]]
   for = "/css/*"
   [headers.values]
@@ -32,3 +31,8 @@
   for = "/js/*"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
+
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
