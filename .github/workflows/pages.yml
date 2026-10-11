@@ -1,10 +1,10 @@
-# Publica el sitio en GitHub Pages cada vez que cambia la rama main.
+# Publica el sitio en GitHub Pages cada vez que cambia la rama principal del repositorio.
 # Una sola vez: Settings > Pages > Build and deployment > Source: «GitHub Actions».
 # Queda en https://<usuario>.github.io/penieltours/ (la raíz redirige a /profesional/).
 name: Publicar en GitHub Pages
 on:
   push:
-    branches: [main]
+    branches: [main, claude/sharp-hamilton-yjb8d6]   # la rama principal de este repositorio es la segunda
   workflow_dispatch:
 permissions:
   contents: read

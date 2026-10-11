@@ -53,8 +53,8 @@ python3 herramientas/build.py        # regenera profesional/*.html
 
 ## Publicar
 
-- **GitHub Pages** (gratis, repositorio público): fusionar la rama a `main` y, una sola vez, en
-  *Settings → Pages → Source: GitHub Actions*. El flujo `.github/workflows/pages.yml` lo deja en
+- **GitHub Pages** (gratis, repositorio público): una sola vez, en *Settings → Pages → Source: GitHub Actions*, y en
+  la pestaña *Actions* correr «Publicar en GitHub Pages» (después se publica solo con cada cambio). Queda en
   `https://pelukin42.github.io/penieltours/`.
 - **Netlify:** arrastrar la carpeta `profesional/` a <https://app.netlify.com/drop>, o conectar el repositorio
   (`netlify.toml` ya indica que se publica `profesional/`).
